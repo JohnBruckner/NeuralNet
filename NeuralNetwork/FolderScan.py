@@ -46,7 +46,7 @@ def scanFolder(pathToFolder):
         if not fileList == newFileList:
             newImg = set(newFileList) - set(fileList)
             print("new instance has been launched")
-            subprocess.Popen(['python', scriptPath, os.path.join(pathToFolder, newImg[0]))
+            subprocess.Popen(['python', scriptPath, os.path.join(pathToFolder, newImg[0])])
             fileList = newFileList
 
         else:
