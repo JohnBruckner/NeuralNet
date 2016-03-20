@@ -42,6 +42,10 @@ def scanFolder(pathToFolder):
         fileList = os.listdir(pathToFolder)
         time.sleep(0.2)
         newFileList = os.listdir(pathToFolder)
+        
+        img_temp = Image.open(newImg[0])
+        img_rotated = img_temp.rotate(180)
+        img_rotated.save(newImg[0])
 
         if not fileList == newFileList:
             newImg = set(newFileList) - set(fileList)
